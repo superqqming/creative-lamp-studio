@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AD441A｜一個動作，兩個世界</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f4eb;color:#182d25;font:1rem/1.65 system-ui,sans-serif}header,main{max-width:60rem;margin:auto;padding-inline:clamp(1rem,5vw,3rem)}header{padding-block:clamp(2rem,8vw,5rem) 1rem}h1{font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.08;margin:.3em 0;letter-spacing:-.04em}h2,h3{line-height:1.3;margin:0 0 .6em}p{margin:.3em 0 .65em}[lang=en]{color:#45594f}header [lang=en]{font-size:1.25rem}nav,.grid{display:flex;flex-wrap:wrap;gap:.7rem 1.1rem}nav{margin-top:1.3rem}a{color:#105c42;text-underline-offset:.2em}a:focus-visible{outline:3px solid #105c42;outline-offset:3px}section{margin:1.15rem 0;padding:clamp(1rem,4vw,2rem);background:white;border:1px solid #cbd7cb;border-radius:1rem}.grid article{flex:1 1 14rem;background:#f3f4eb;padding:1rem;border-radius:.6rem}.week{border-top:1px solid #cbd7cb;padding-top:.8rem;margin-top:.8rem}li+li{margin-top:.6rem}main{padding-bottom:2rem}@media print{nav{display:none}section,article,.week,li{break-inside:avoid}body{background:white}}
+details{margin:1.15rem 0;padding:clamp(1rem,4vw,2rem);background:white;border:1px solid #cbd7cb;border-radius:1rem}
+summary{font-size:1.25rem;font-weight:700;cursor:pointer}
+details>article{border-top:1px solid #cbd7cb;margin-top:1rem;padding-top:1rem}
+</style>
+</head>
+<body>
+<header>
+<p>AD441A 互動科技裝置｜期末作業</p>
+<h1>一個動作，兩個世界<br>玩具改造</h1>
+<p lang="en">One Action, Two Worlds: Toy Hack</p>
+<nav aria-label="作業導覽">
+<a href="#brief">作品要求 / Brief</a><a href="#weeks">每週進度 / Milestones</a><a href="#final">期末發表 / Final</a><a href="#grading">評分 / Grading</a><a href="#sensing">感測與條件判斷 / Sensing &amp; Logic</a><a href="#examples">案例 / Examples</a>
+</nav>
+</header>
+<main>
+<section id="brief">
+<h2>作品要求 <span lang="en">/ Project Brief</span></h2>
+<p>選一個實體玩具，利用它原本的按法、動作、造型或機構改造一個部位，讓玩具和網頁連動。設計一個可重複操作的回合，讓觀眾看懂自己的動作造成了什麼變化。</p>
+<p lang="en">Choose a physical toy. Adapt one part by building on how it is pressed, moved, shaped, or assembled. Connect it to a web interface and design one repeatable interaction whose feedback visitors can understand.</p>
+<div class="grid">
+<article><h3>玩具當操作介面 <span lang="en">/ Toy as input</span></h3><p>轉動玩具方向盤，網頁上的車跟著轉向，到目的地時顯示「已到站」。</p><p lang="en">Turn a toy steering wheel to steer a car on screen. The interface shows “Arrived” when the car reaches its destination.</p></article>
+<article><h3>玩具當輸出 <span lang="en">/ Toy as output</span></h3><p>在網頁上選擇表情，玩具眼部的矩陣顯示對應表情。</p><p lang="en">Select an expression on the web interface. A matrix fitted into the toy’s eye area displays the matching expression.</p></article>
+</div>
+<p><strong>完成其中一種即可。</strong> 雙向連動可依作品需要加入。MAX7219 是期末選用元件，也可使用感測器、按鍵、LED、伺服馬達等元件。</p>
+<p lang="en"><strong>Choose either role.</strong> Add two-way interaction if it suits your project. The MAX7219 is optional for the final. You may also use sensors, buttons, LEDs, servos, or other suitable components.</p>
+<p>完成一次同儕試玩與一項修改。可以用 AI 協助寫程式、建模或排查問題。發表時請用自己的話解釋一段互動規則。</p>
+<p lang="en">Run one peer playtest and revise one aspect based on what you observe. You may use AI for coding, modeling, or troubleshooting. At the final, explain one interaction rule in your own words.</p>
+</section>
+<section id="weeks">
+<h2>每週進度 <span lang="en">/ Weekly Milestones</span></h2>
+<article class="week"><h3>本週｜MAX7219 練習與玩具提案 <span lang="en">/ This week · Matrix exercise and toy proposal</span></h3>
+<ol><li>完成 MAX7219 模擬練習，讓使用者能在網頁編輯並預覽 8×8 圖案。<br><span lang="en">Finish the MAX7219 simulator so users can edit and preview an 8×8 pattern on the web page.</span></li>
+<li>選定玩具，拍下改造前的照片，交一頁提案。標出改造部位、主要元件、玩具的角色，以及「觀眾做什麼 → 另一端怎麼變 → 觀眾如何知道成功」。<br><span lang="en">Choose a toy, photograph it before modification, and submit a one-page proposal. Mark the part you will adapt, list the main components, identify the toy’s role, and show the visitor action, the change on the other side, and how visitors know it worked.</span></li></ol></article>
+<article class="week"><h3>下一週｜虛實原型 <span lang="en">/ Next week · Connected prototype</span></h3><p>把至少一個元件裝到玩具上，可以先暫時固定。用實體玩具與網頁示範一個可重複操作的回合，指出輸入、程式判斷和輸出。</p><p lang="en">Fit at least one component to the toy. A temporary mount is fine. Demonstrate one repeatable interaction between the toy and the web interface. Identify the input, the rule the code applies, and the output.</p></article>
+<article class="week"><h3>再下一週｜試玩與修正 <span lang="en">/ Following week · Playtest and revise</span></h3><p>請一位沒看過作品的同學自行試玩。記下他先做什麼、在哪裡卡住、怎麼判斷成功。依照觀察修改一處，再試一次並記錄結果。</p><p lang="en">Ask a classmate who has never seen the project to try it independently. Note what they do first, where they get stuck, and how they know it worked. Make one change, test it again, and record the result.</p></article>
+<article class="week"><h3>期末發表週｜現場展示與交付 <span lang="en">/ Final week · Live demonstration and submission</span></h3><p>確認作品能啟動、操作並重設，讓下一位觀眾接著試玩。備齊下列交付資料。</p><p lang="en">Check that the project starts, works, and resets for the next visitor. Prepare the submission materials listed below.</p></article>
+</section>
+<section id="final">
+<h2>期末發表與交付 <span lang="en">/ Final Presentation and Submission</span></h2>
+<h3>每件作品 5 分鐘 <span lang="en">/ 5 minutes per project</span></h3>
+<ul>
+<li><strong>1 分鐘｜介紹。</strong> 出示改造前照片，指出改造部位、使用對象和觀眾的第一個動作。<br><span lang="en"><strong>1 minute · Introduction.</strong> Show a photo of the original toy. Explain what you changed, who it is for, and what the visitor does first.</span></li>
+<li><strong>3 分鐘｜現場試玩。</strong> 邀請一位觀眾完成一個回合，展示玩具與網頁各自如何回應。<br><span lang="en"><strong>3 minutes · Live interaction.</strong> Invite a visitor to complete one interaction and show how the toy and web interface respond.</span></li>
+<li><strong>1 分鐘｜說明設計。</strong> 解釋一段互動規則，以及一項試玩後的修改。<br><span lang="en"><strong>1 minute · Design explanation.</strong> Explain one interaction rule and one change you made after playtesting.</span></li>
+</ul>
+<h3>期末繳交 <span lang="en">/ What to Submit</span></h3>
+<ul>
+<li>網頁與 Arduino 原始檔。<br><span lang="en">Web and Arduino source files.</span></li>
+<li>玩具改造前後照片，以及接線圖或有腳位標註的接線照片。<br><span lang="en">Before-and-after photos of the toy and a wiring diagram or labeled wiring photo.</span></li>
+<li>必要元件、函式庫、連線方式、啟動及重設說明。<br><span lang="en">Required components and libraries, plus instructions for connecting, starting, and resetting the project.</span></li>
+<li>試玩紀錄，包含觀察、修改與再次試玩的結果。<br><span lang="en">A short record of the playtest observation, revision, and retest result.</span></li>
+</ul></section>
+<section id="grading">
+<h2>評分｜100 分 <span lang="en">/ Grading · 100 points</span></h2>
+<div class="grid">
+<article><h3>30 分｜玩具改造與互動設計 <span lang="en">/ Toy modification and interaction design</span></h3><p>玩具特徵用在操作或輸出上。觀眾知道怎麼操作，也能理解回饋。</p><p lang="en">A toy feature contributes to input or output. Visitors can tell how to interact and understand the feedback.</p></article>
+<article><h3>35 分｜虛實整合 <span lang="en">/ Physical–digital integration</span></h3><p>玩具與網頁確實連動，反應符合設計，整個回合可重複操作。</p><p lang="en">The toy and web interface communicate, respond as designed, and support repeated use.</p></article>
+<article><h3>20 分｜試玩與修正 <span lang="en">/ Playtesting and revision</span></h3><p>記錄實際觀察、據此修正的內容，以及再次操作的結果。</p><p lang="en">The work documents what happened during playtesting, what changed in response, and what happened on retest.</p></article>
+<article><h3>15 分｜發表與交付 <span lang="en">/ Presentation and submission</span></h3><p>觀眾能參與現場示範，作者能說明互動規則，交付資料足以讓他人啟動作品。</p><p lang="en">A visitor can participate, the creator can explain an interaction rule, and the materials let someone else start the project.</p></article>
+</div></section>
+
+<section id="sensing">
+<h2>讓感測器看懂一個行為 <span lang="en">/ Recognizing an Action with Sensors</span></h2>
+<p>選一種想辨認的行為，使用現有的超聲波感測器，依需要加領其他感測器。設計判斷規則，讓網頁模擬器呈現數值、判斷過程與結果，再思考玩具如何回應這項資訊。</p>
+<p lang="en">Choose an action you want to recognize. Use your ultrasonic sensor and request additional sensors as needed. Design rules and visualize the readings, decision process, and result in your web simulator. Then decide how your toy could respond.</p>
+<article class="week">
+<h3>共同暖身｜進入還是離開？ <span lang="en">/ Warm-up · Entering or Leaving?</span></h3>
+<p>在單人依序通過的狹窄通道前後設置 A、B 兩個偵測位置。先用網頁按鈕模擬訊號，再測試實體感測器。A → B 可作為進入的候選順序，B → A 可作為離開的候選順序；請決定何時才算完成通過，以及何時可以開始判斷下一次。</p>
+<p lang="en">Place detection points A and B along a narrow passage used by one person at a time. Simulate signals with web buttons before testing physical sensors. A → B suggests entry and B → A suggests exit. Define when a passage is complete and when the system is ready for the next person.</p>
+<ul>
+<li>正常進入與離開：完成後各計數一次。<br><span lang="en">Normal entry and exit: count each completed passage once.</span></li>
+<li>觸發 A 後退回：判斷要等多久，以及如何取消。<br><span lang="en">A is triggered, then the person retreats: decide how long to wait and how to cancel.</span></li>
+<li>停在感測範圍：避免同一次停留被反覆計數。<br><span lang="en">Someone stays within range: prevent repeated counting of the same visit.</span></li>
+<li>兩處幾乎同時觸發：顯示待判定，說明還需要什麼訊號。<br><span lang="en">Both points trigger almost together: show an uncertain state and identify what further evidence is needed.</span></li>
+</ul>
+<p>畫出「等待 → 第一個訊號 → 等待後續訊號 → 確認或取消 → 回到等待」。兩人並排、緊貼或反向同時通過時，記錄系統的判斷限制。</p>
+<p lang="en">Sketch “Ready → First signal → Await further signals → Confirm or cancel → Ready.” Document the limits when people pass side by side, close together, or in opposite directions at the same time.</p>
+</article>
+<article class="week">
+<h3>你的資訊可信嗎？ <span lang="en">/ Can You Trust Your Interpretation?</span></h3>
+<ol>
+<li><strong>定義行為。</strong> 寫出想辨認的事，例如靠近後觸碰、停留一段時間或通過入口。<br><span lang="en"><strong>Define the action.</strong> State what you want to recognize, such as approaching and touching, staying for a while, or passing through an entrance.</span></li>
+<li><strong>選擇訊號。</strong> 說明需要哪些感測器與擺放位置，以及距離、順序、時間或次數如何支持判斷。<br><span lang="en"><strong>Choose the evidence.</strong> Explain your sensors and placement, and how distance, sequence, timing, or frequency supports the interpretation.</span></li>
+<li><strong>現場核對。</strong> 請同學照預定情境操作，把實際行為與系統判斷並排記錄，保留一次正確判斷與一次誤判或無法判定。<br><span lang="en"><strong>Check against observation.</strong> Have a peer perform your scenarios. Record the actual action alongside the system’s interpretation, including one correct result and one error or uncertain result.</span></li>
+<li><strong>修改規則。</strong> 調整門檻、等待時間、感測器位置或狀態流程，再次測試並說明仍可能判錯的情況。<br><span lang="en"><strong>Revise the rules.</strong> Adjust thresholds, timing, placement, or states. Retest and explain which situations may still cause errors.</span></li>
+</ol>
+<p>例如，距離變短支持「物體靠近」的判斷；要判斷「有人進入」，還需要設定通道、方向與完成通過的條件。</p>
+<p lang="en">For example, decreasing distance supports “an object is approaching.” Interpreting it as “a person has entered” requires a defined passage, direction, and completion conditions.</p>
+</article>
+<article class="week">
+<h3>模擬器要呈現什麼？ <span lang="en">/ What Should Your Simulator Show?</span></h3>
+<div class="grid">
+<article><h3>原始數值 <span lang="en">/ Readings</span></h3><p>距離、開關狀態或其他感測數值。</p><p lang="en">Distance, switch states, or other sensor readings.</p></article>
+<article><h3>判斷過程 <span lang="en">/ Decision Process</span></h3><p>目前狀態、觸發順序、等待時間與事件紀錄。</p><p lang="en">Current state, signal sequence, waiting time, and event history.</p></article>
+<article><h3>結果與回應 <span lang="en">/ Result and Response</span></h3><p>辨認出的行為或待判定狀態，以及玩具預計如何反應。</p><p lang="en">The recognized action or uncertain state, and the toy’s intended response.</p></article>
+</div>
+</article>
+<article class="week">
+<h3>接回期末玩具 <span lang="en">/ Connect It to Your Final Toy</span></h3>
+<p>回答「我的玩具需要知道觀眾的什麼行為？取得這項資訊後，它如何回應？」例如觀眾靠近後觸碰，玩具才醒來；觀眾停留一段時間，玩具逐漸放鬆。以這次練習的規則與視覺化，發展期末互動原型。</p>
+<p lang="en">Answer “What visitor action does my toy need to recognize, and how should it respond?” A toy might wake only after someone approaches and touches it, or gradually relax when someone stays nearby. Build your final prototype from these rules and visualizations.</p>
+<p><strong>課堂完成項目：</strong>行為與感測配置草圖、可操作的網頁模擬器、一則測試與修正紀錄，以及玩具回應的構想。</p>
+<p lang="en"><strong>Class checkpoint:</strong> an action and sensor-placement sketch, a working web simulator, a test-and-revision note, and an idea for the toy’s response.</p>
+</article>
+</section>
+
+<details id="examples" open><summary>玩具改造案例 / Toy Hack Case Studies</summary>
+<nav aria-label="案例導覽"><a href="#hug">抱玩偶觸發音樂 / Hug a Toy</a><a href="#karaoke">卡拉 OK 機器人 / KaraokeBot</a><a href="#truck">網站啟動玩具 / Web-Triggered Toy</a></nav>
+<article id="hug">
+<h2>抱玩偶觸發音樂 <span lang="en">/ Hug a Toy to Make Music</span></h2>
+<p><strong>玩具當輸入。</strong> Makey Makey 和 Scratch 的工作坊介紹如何用摸、按或抱等日常動作觸發電腦上的聲音。以玩偶為例，擁抱可以成為程式接收的觸發事件，Scratch 再用這個事件播放音樂。</p>
+<p lang="en"><strong>Toy as input.</strong> The Makey Makey and Scratch workshop explores how everyday actions such as touching, pressing, or hugging can trigger sound. A hug can become the input that starts music in Scratch.</p>
+<p><strong>觀察重點。</strong> 擁抱這個動作怎麼被偵測？如果觀眾持續抱住，聲音要播放一次還是持續播放？</p>
+<p lang="en"><strong>Watch for:</strong> How could a hug be detected? If the visitor holds the hug, should the sound play once or continue?</p>
+<ul class="resources">
+<li><a href="https://www.youtube.com/watch?v=7MwfIZkTqmk" target="_blank" rel="noopener noreferrer">在 YouTube 開啟工作坊錄影 / Workshop replay on YouTube</a></li>
+<li><a href="https://makeymakey.com/blogs/blog/hour-of-code-beyond-the-banana-make-music-with-makey-makey-and-scratch" target="_blank" rel="noopener noreferrer">原文、工作坊投影片與延伸資源 / Original article, slides, and resources</a></li>
+</ul></article>
+<article id="karaoke">
+<h2>會唱歌的湯瑪士 <span lang="en">/ KaraokeBot</span></h2>
+<p><strong>玩具當輸出。</strong> Hunter Irving 取下二手玩具的臉，保留能讓嘴巴與眼睛動起來的機構，再加裝伺服馬達。Arduino 讀取音樂軟體安排好的 MIDI 訊息，依時序開合嘴巴，配上合成歌聲。</p>
+<p lang="en"><strong>Toy as output.</strong> Hunter Irving reused a secondhand toy’s face and its moving mechanism. An Arduino reads MIDI messages arranged in music software and drives a servo to move the mouth in time with synthesized vocals.</p>
+<p><strong>觀察重點。</strong> 找出一個能表達狀態的部位，例如嘴巴開合。試著把案例的 MIDI 訊息換成網頁事件，想像觀眾的哪個操作會觸發這個動作。</p>
+<p lang="en"><strong>Watch for:</strong> Identify one moving part that communicates a state. Imagine replacing the MIDI cue with a web event. What would the visitor do to trigger the motion?</p>
+<ul class="resources">
+<li><a href="https://www.youtube.com/watch?v=IbHfiO7Sy8U" target="_blank" rel="noopener noreferrer">在 YouTube 開啟示範影片 / Demo on YouTube</a></li>
+<li><a href="https://hackaday.io/project/161523/instructions" target="_blank" rel="noopener noreferrer">作者的製作步驟 / Creator’s build instructions</a> · <a href="https://github.com/hunterirving/KaraokeBot" target="_blank" rel="noopener noreferrer">Arduino 原始碼 / Source code</a> · <a href="https://blog.arduino.cc/2018/08/13/thomas-the-tank-engine-turned-into-a-karaoke-robot/" target="_blank" rel="noopener noreferrer">Arduino 報導 / Article</a></li>
+</ul></article>
+<article id="truck">
+<h2>網站事件啟動玩具 <span lang="en">/ Web-Triggered Toy</span></h2>
+<p><strong>玩具當輸出。</strong> Roth Mobot 讓網站上的造訪事件啟動一輛改造過的電子警車。網站更新計數，電腦上的程式偵測變更並通知 Arduino，Arduino 再透過光耦合觸發警車原有的燈光與語音。</p>
+<p lang="en"><strong>Toy as output.</strong> Roth Mobot made a modified electronic police truck respond to a website visit. A script detects a change in the site’s counter and signals an Arduino, which uses optical coupling to trigger the truck’s existing lights and voice.</p>
+<p><strong>觀察重點。</strong> 把網站事件和玩具的回應畫成三格流程。指出事件在哪裡發生、誰接收它，以及觀眾能看到或聽到什麼。</p>
+<p lang="en"><strong>Look for:</strong> Sketch a three-step flow. Show where the event happens, what receives it, and what the visitor can see or hear.</p>
+<ul class="resources">
+<li><a href="https://rothmobot.blogspot.com/2010/05/arduino-hacked-toy-internet-alert.html" target="_blank" rel="noopener noreferrer">作者原文／「Video of Circuit in Action」段落、接線圖及程式範例 / Original project, video section, diagrams, and code</a></li>
+<li><a href="https://blog.arduino.cc/2010/10/12/hacked-toy-internet-alert-circuit-2/" target="_blank" rel="noopener noreferrer">Arduino 報導 / Article</a></li>
+</ul></article>
+
+</details>
+</main>
+</body>
+</html>
