@@ -9,6 +9,12 @@
 details{margin:1.15rem 0;padding:clamp(1rem,4vw,2rem);background:white;border:1px solid #cbd7cb;border-radius:1rem}
 summary{font-size:1.25rem;font-weight:700;cursor:pointer}
 details>article{border-top:1px solid #cbd7cb;margin-top:1rem;padding-top:1rem}
+
+.record-table{overflow-x:auto;margin:.8rem 0 1.4rem}
+.record-table table{width:100%;border-collapse:collapse;text-align:left;font-size:.95rem}
+.record-table th,.record-table td{border:1px solid #cbd7cb;padding:.7rem;vertical-align:top;overflow-wrap:anywhere}
+.record-table th[scope="row"]{width:35%;font-weight:600}
+@media(max-width:480px){.record-table th,.record-table td{padding:.5rem}}
 </style>
 </head>
 <body>
@@ -17,7 +23,7 @@ details>article{border-top:1px solid #cbd7cb;margin-top:1rem;padding-top:1rem}
 <h1>一個動作，兩個世界<br>玩具改造</h1>
 <p lang="en">One Action, Two Worlds: Toy Hack</p>
 <nav aria-label="作業導覽">
-<a href="#brief">作品要求 / Brief</a><a href="#weeks">每週進度 / Milestones</a><a href="#final">期末發表 / Final</a><a href="#proposal-grading">提案報告與評分 / Proposal</a><a href="#grading">期末評分 / Final Grading</a><a href="#sensing">感測與條件判斷 / Sensing &amp; Logic</a><a href="#examples">案例 / Examples</a>
+<a href="#brief">作品要求 / Brief</a><a href="#weeks">進度日期 / Schedule</a><a href="#playtest-record">試玩紀錄 / Playtest Record</a><a href="#final">期末發表 / Final</a><a href="#proposal-grading">原型報告與評分 / Prototype Review</a><a href="#grading">期末評分 / Final Grading</a><a href="#sensing">感測與條件判斷 / Sensing &amp; Logic</a><a href="#examples">案例 / Examples</a>
 </nav>
 </header>
 <main>
@@ -36,26 +42,46 @@ details>article{border-top:1px solid #cbd7cb;margin-top:1rem;padding-top:1rem}
 </section>
 <section id="weeks">
 <h2>進度日期 <span lang="en">/ Schedule</span></h2>
-<p>以下日期以 2026 年課程安排標示。12 月 3 日與 12 月 10 日為暫定檢查點，期末發表日期待確認。</p>
-<p lang="en">Dates below refer to the 2026 course schedule. December 3 and December 10 are provisional checkpoints. The final presentation date will be confirmed.</p>
+<p>2026/11/26 為虛實原型報告，期末發表安排於第 16 週的 2026/12/24（四）。12/03、12/10、12/17 為建議的後續檢查點。</p>
+<p lang="en">The connected prototype review is on November 26, 2026. The final presentation is on Thursday, December 24, 2026, in Week 16. December 3, 10, and 17 are proposed follow-up checkpoints.</p>
 <article class="week"><h3>2026/11/19｜MAX7219 練習與玩具構想 <span lang="en">/ Matrix Exercise and Toy Concept</span></h3>
-<ol><li>MAX7219 模擬練習的目標為在網頁編輯並預覽 8×8 圖案。<br><span lang="en">The MAX7219 exercise aims to let users edit and preview an 8×8 pattern on the web page.</span></li>
-<li>選定玩具，拍下改造前的照片，畫出預計改造部位與主要元件，整理「觀眾操作 → 虛實連動 → 回饋」。<br><span lang="en">Choose a toy, photograph it before modification, mark the part you plan to adapt and the main components, and outline the visitor action, physical–digital response, and feedback.</span></li></ol></article>
-<article class="week"><h3>2026/11/26｜提案報告 <span lang="en">/ Proposal Presentation</span></h3>
-<p>帶玩具實物、玩具照片與三格流程圖，說明「操作前 → 觀眾動作 → 玩具與畫面回應」。提出基本完成目標、自選挑戰與測試計畫。評分項目與報告問題見下方。</p>
-<p lang="en">Bring your physical toy, a photo, and a three-frame storyboard showing the initial state, visitor action, and toy and screen responses. Present your core goal, personal challenge, and test plan. See the proposal criteria and prompts below.</p></article>
-<article class="week"><h3>2026/12/03｜虛實原型檢查（暫定） <span lang="en">/ Connected Prototype Checkpoint (Provisional)</span></h3>
-<p>將至少一個元件裝到玩具上，可以暫時固定。用實體玩具與網頁示範一個可重複操作的回合，指出輸入、程式判斷和輸出，展示自選挑戰的初步嘗試。</p>
-<p lang="en">Fit at least one component to the toy. A temporary mount is fine. Demonstrate one repeatable interaction between the toy and web interface. Identify the input, decision rule, and output, and show an initial attempt at your personal challenge.</p></article>
-<article class="week"><h3>2026/12/10｜同儕試玩與修正（暫定） <span lang="en">/ Peer Playtesting and Revision (Provisional)</span></h3>
-<p>請一位沒看過作品的同學自行試玩。記下他先做什麼、在哪裡卡住、怎麼判斷成功。依觀察修改一處，再試一次並記錄結果。</p>
-<p lang="en">Ask a classmate who has never seen the project to try it independently. Note their first action, where they get stuck, and how they know it worked. Make one change based on the observation, test again, and record the result.</p></article>
-<article class="week"><h3>期末發表｜日期待確認 <span lang="en">/ Final Presentation · Date to Be Confirmed</span></h3>
-<p>確認作品能啟動、操作並重設，讓下一位觀眾接著試玩。備齊下方期末交付資料。發表日期確認後於此更新。</p>
-<p lang="en">Check that the project starts, works, and resets for the next visitor. Prepare the final submission materials listed below. The presentation date will be updated here once confirmed.</p></article>
+<p>MAX7219 模擬練習的目標為在網頁編輯並預覽 8×8 圖案。選定玩具，拍下改造前照片，整理「觀眾操作 → 虛實連動 → 回饋」。</p>
+<p lang="en">The MAX7219 exercise aims to let users edit and preview an 8×8 pattern. Choose a toy, photograph it before modification, and outline the visitor action, physical–digital response, and feedback.</p></article>
+<article class="week"><h3>2026/11/26｜虛實原型與進度報告 <span lang="en">/ Connected Prototype and Progress Review</span></h3>
+<p>帶玩具實物與目前的網頁，示範已完成的虛實連動。指出輸入、程式判斷與輸出，說明基本完成目標、自選挑戰，以及目前卡住的地方。尚在製作的部分可用照片、簡單圖形或三格流程圖輔助說明。</p>
+<p lang="en">Bring your physical toy and current web interface. Demonstrate the connection you have implemented. Identify the input, decision rule, and output. Explain your core goal, personal challenge, and current difficulties. Use photos, simple shapes, or a three-frame storyboard to explain parts still in progress.</p></article>
+<article class="week"><h3>2026/12/03｜同儕試玩與修正（建議檢查點） <span lang="en">/ Peer Playtesting and Revision (Proposed Checkpoint)</span></h3>
+<p>請一位沒看過作品的同學自行試玩，觀察他先做什麼、在哪裡卡住、怎麼判斷成功。依觀察修改一處，以相同操作再試一次，記錄結果。</p>
+<p lang="en">Ask a classmate who has never seen the project to try it independently. Observe their first action, where they get stuck, and how they know it worked. Make one change, repeat the same task, and record the result.</p>
+<p><a href="#playtest-record">查看並填寫試玩紀錄範本 / Use the playtest record template</a></p></article>
+<article class="week"><h3>2026/12/10｜整合與穩定性檢查（建議檢查點） <span lang="en">/ Integration and Reliability (Proposed Checkpoint)</span></h3>
+<p>整合玩具與網頁，重複測試完整互動與重設流程，修正試玩中發現的問題，整理自選挑戰的進展。</p>
+<p lang="en">Integrate the toy and web interface. Repeatedly test the full interaction and reset process, resolve issues found in playtesting, and document progress on your personal challenge.</p></article>
+<article class="week"><h3>2026/12/17｜發表準備（建議檢查點） <span lang="en">/ Presentation Preparation (Proposed Checkpoint)</span></h3>
+<p>演練 5 分鐘發表，確認觀眾能操作、作品能重設，整理原始檔、接線資料、啟動說明與試玩紀錄。</p>
+<p lang="en">Rehearse the five-minute presentation. Check that visitors can interact and the project resets. Prepare source files, wiring information, startup instructions, and your playtest record.</p></article>
+<article class="week"><h3>2026/12/24（四）｜第 16 週期末發表 <span lang="en">/ Thursday, December 24 · Week 16 Final Presentation</span></h3>
+<p>進行每件作品 5 分鐘的現場展示，邀請觀眾完成一次互動，並繳交下方列出的期末資料。</p>
+<p lang="en">Give a five-minute live presentation, invite a visitor to complete one interaction, and submit the final materials listed below.</p></article>
+<p>週次與日期依元智大學 115 學年度行事曆換算。<a href="https://www.yzu.edu.tw/admin/aa/files/%E8%A1%8C%E4%BA%8B%E6%9B%86/115%E5%AD%B8%E5%B9%B4%E5%BA%A6%E8%A1%8C%E4%BA%8B%E6%9B%86%E4%B8%AD%E6%96%870617%E8%A1%8C%E6%94%BF%E6%9C%83%E8%AD%B0%E4%BF%AE%E6%AD%A3%E9%80%9A%E9%81%8E.pdf" target="_blank" rel="noopener noreferrer">校曆 / University calendar</a></p>
+<p lang="en">Week numbers and dates follow Yuan Ze University's 2026–2027 academic calendar.</p>
+</section>
+<section id="playtest-record">
+<h2>試玩與修正紀錄範本 <span lang="en">/ Playtesting and Revision Record</span></h2>
+<p>複製下列格式，每次觀察一個完整操作回合。請試玩者先自行嘗試，記下實際動作與回應，再選一個問題修改，用相同操作再次測試。可依需要增加觀察紀錄。</p>
+<p lang="en">Copy this format and observe one complete interaction per test. Let the tester try independently first. Record their actions and the system response, choose one issue to revise, and repeat the same task. Add observations as needed.</p>
+<p><a href="files/playtest-record.md" target="_blank" rel="noopener noreferrer">開啟 Markdown 範本 / View Markdown template</a> · <a href="files/playtest-record.md" download="AD441A_playtest_record.md">下載範本 / Download template</a></p>
+<h3>基本資料 <span lang="en">/ Test Details</span></h3><div class="record-table"><table><thead><tr><th scope="col">欄位 / Field</th><th scope="col">填寫提示 / Prompts</th></tr></thead><tbody><tr><th scope="row">測試日期 / Test date</th><td>＿＿＿</td></tr><tr><th scope="row">作品名稱、作者或組別 / Project and creator or group</th><td>＿＿＿</td></tr><tr><th scope="row">作品版本 / Project version</th><td>＿＿＿</td></tr><tr><th scope="row">試玩者代號 / Tester code</th><td>＿＿＿</td></tr></tbody></table></div><h3>測試前 <span lang="en">/ Before the Test</span></h3><div class="record-table"><table><thead><tr><th scope="col">欄位 / Field</th><th scope="col">填寫提示 / Prompts</th></tr></thead><tbody><tr><th scope="row">要試的操作 / Task</th><td>請試玩者做什麼？用一句話描述。 / Describe one action for the tester.</td></tr><tr><th scope="row">預期反應與成功條件 / Expected response and success criteria</th><td>玩具與畫面應該怎麼反應？怎樣算完成？ / What should the toy and screen do? What counts as completion?</td></tr></tbody></table></div><h3>試玩觀察 <span lang="en">/ Observations</span></h3><div class="record-table"><table><thead><tr><th scope="col">欄位 / Field</th><th scope="col">填寫提示 / Prompts</th></tr></thead><tbody><tr><th scope="row">實際操作 / Observed action</th><td>試玩者先做什麼？接著怎麼做？ / What did the tester do first and next?</td></tr><tr><th scope="row">實際反應 / Actual response</th><td>玩具與畫面實際發生什麼？ / What actually happened on the toy and screen?</td></tr><tr><th scope="row">觀眾理解 / Visitor understanding</th><td>試玩者以為發生什麼？可記下一句原話。 / What did the tester think happened? You may record a short comment.</td></tr><tr><th scope="row">需要提示的地方 / Help needed</th><td>在哪裡卡住？作者提供了什麼提示？ / Where did they get stuck? What hints did the creator provide?</td></tr></tbody></table></div><h3>修改與再次測試 <span lang="en">/ Revision and Retest</span></h3><div class="record-table"><table><thead><tr><th scope="col">欄位 / Field</th><th scope="col">填寫提示 / Prompts</th></tr></thead><tbody><tr><th scope="row">選一個問題 / Select one issue</th><td>根據哪個觀察，決定先改什麼？ / Which observation led you to choose this issue?</td></tr><tr><th scope="row">修改前 → 修改後 / Before → after</th><td>具體改了哪個部位、畫面、條件或回饋？ / Which part, screen element, condition, or feedback did you change?</td></tr><tr><th scope="row">再次試玩的結果 / Retest result</th><td>用相同操作再測一次。觀眾能否完成？問題是否改善？ / Repeat the same task. Could the tester finish, and did the issue improve?</td></tr><tr><th scope="row">下一步 / Next step</th><td>還有什麼待解決？下一個要測試什麼？ / What remains unresolved, and what will you test next?</td></tr></tbody></table></div>
+<article class="week"><h3>參考填法 <span lang="en">/ Example</span></h3>
+<p><strong>觀察：</strong>試玩者點擊玩具照片的嘴巴，按鈕沒有改變，於是又點三次。實體嘴巴稍後才動。</p>
+<p lang="en"><strong>Observation:</strong> The tester clicked the mouth in the toy photo. The button did not change, so they clicked three more times. The physical mouth moved later.</p>
+<p><strong>修改：</strong>送出動作後，畫面先顯示「指令已送出」。依程式預定動作時間暫停重複觸發，時間到後顯示「可再操作」。</p>
+<p lang="en"><strong>Revision:</strong> Show “Command sent” after sending the action. Pause repeated triggers for the programmed motion duration, then show “Ready for another action.”</p>
+<p><strong>再次測試：</strong>觀察試玩者是否會等待，以及實體是否正常動作，分別記錄。</p>
+<p lang="en"><strong>Retest:</strong> Record whether the tester waits and whether the physical toy moves correctly as separate observations.</p></article>
 </section>
 <section id="final">
-<h2>期末發表與交付 <span lang="en">/ Final Presentation and Submission</span></h2>
+<h2>2026/12/24 期末發表與交付 <span lang="en">/ Final Presentation and Submission · December 24</span></h2>
 <h3>每件作品 5 分鐘 <span lang="en">/ 5 minutes per project</span></h3>
 <ul>
 <li><strong>1 分鐘｜介紹。</strong> 出示改造前照片，指出改造部位、使用對象和觀眾的第一個動作。<br><span lang="en"><strong>1 minute · Introduction.</strong> Show a photo of the original toy. Explain what you changed, who it is for, and what the visitor does first.</span></li>
@@ -70,13 +96,13 @@ details>article{border-top:1px solid #cbd7cb;margin-top:1rem;padding-top:1rem}
 <li>試玩紀錄，包含觀察、修改與再次試玩的結果。<br><span lang="en">A short record of the playtest observation, revision, and retest result.</span></li>
 </ul></section>
 <section id="proposal-grading">
-<h2>2026/11/26 提案報告與評分 <span lang="en">/ Proposal Presentation and Grading</span></h2>
-<p>每組提出一個基本完成目標，以及一項超出目前能力、值得嘗試的自選挑戰。用具體的操作與測試計畫，說明作品如何從構想發展成可試玩的原型。</p>
-<p lang="en">Each group proposes a core goal and one worthwhile personal challenge beyond its current skills. Use a concrete interaction and test plan to explain how the concept will become a playable prototype.</p>
+<h2>2026/11/26 虛實原型報告與評分 <span lang="en">/ Connected Prototype Review and Grading</span></h2>
+<p>每組展示目前的虛實原型，並說明基本完成目標、自選挑戰與測試計畫。透過現有操作與製作紀錄，說明目前的進展，以及下一個要完成的步驟。</p>
+<p lang="en">Each group demonstrates its current connected prototype and explains its core goal, personal challenge, and test plan. Use the working interaction and development records to show progress and identify the next implementation step.</p>
 <h3>數位分身的呈現方式 <span lang="en">/ Representing Your Toy on Screen</span></h3>
 <p>可以使用玩具照片加上可點擊部位、簡單幾何圖形，或教師提供的模型。讓觀眾看得出操作位置、虛實對應與回饋，是這次提案的視覺設計目標。</p>
 <p lang="en">You may use a toy photo with clickable regions, simple geometric shapes, or a teacher-provided model. The visual design should help visitors recognize where to act, how the physical and digital parts correspond, and what changed.</p>
-<h3>提案評分｜100 分 <span lang="en">/ Proposal Rubric · 100 Points</span></h3>
+<h3>提案與進度說明評分｜100 分 <span lang="en">/ Concept and Progress Review Rubric · 100 Points</span></h3>
 <div class="grid">
 <article data-proposal-points="30"><h3>30 分｜互動構想 <span lang="en">/ Interaction Concept</span></h3><p>作品給誰玩？觀眾做什麼？玩具與網頁如何回應？這種回應會帶來什麼感受？用流程圖或現場演示說明操作與回饋。</p><p lang="en">Who is it for? What does the visitor do? How do the toy and web interface respond, and what experience do you intend? Explain the action and feedback with a storyboard or demonstration.</p></article>
 <article data-proposal-points="30"><h3>30 分｜基本完成目標 <span lang="en">/ Core Goal</span></h3><p>選定一個可完成的互動回合，指出輸入、判斷與輸出。說明目前已會的部分、缺少的元件或技術，以及第一個要完成的步驟。</p><p lang="en">Define one achievable interaction and identify its input, decision rule, and output. Explain what you can already do, which components or skills you still need, and your first implementation step.</p></article>
@@ -90,12 +116,12 @@ details>article{border-top:1px solid #cbd7cb;margin-top:1rem;padding-top:1rem}
 <li><strong>虛實對應。</strong> 畫面顯示實體回傳的狀態，讓觀眾看懂裝置正在回應、已完成或需要再試一次。<br><span lang="en"><strong>Physical–digital feedback.</strong> Show states reported by the device so visitors can recognize responding, completed, or retry states.</span></li>
 <li><strong>玩具改造。</strong> 利用玩具原有的機構，完成一個可重複操作的動作，並能讓下一位觀眾重新開始。<br><span lang="en"><strong>Toy modification.</strong> Adapt an existing mechanism to make one action repeatable and reset it for the next visitor.</span></li>
 </ul></article>
-<article class="week"><h3>提案報告回答四句話 <span lang="en">/ Four Prompts for Your Presentation</span></h3>
+<article class="week"><h3>原型報告回答四句話 <span lang="en">/ Four Prompts for Your Prototype Review</span></h3>
 <ol>
 <li>我想讓觀眾體驗＿＿＿。<br><span lang="en">I want visitors to experience ___.</span></li>
 <li>我一定要完成的互動是＿＿＿。<br><span lang="en">The core interaction I will complete is ___.</span></li>
 <li>我想挑戰自己的是＿＿＿，因為我目前還不會＿＿＿。<br><span lang="en">My personal challenge is ___ because I currently need to learn ___.</span></li>
-<li>我會在 2026/12/03 原型檢查時展示＿＿＿，用來說明進展。<br><span lang="en">At the provisional December 3 prototype checkpoint, I will demonstrate ___ to show progress.</span></li>
+<li>我目前已完成＿＿＿，接著會請同學試玩＿＿＿，觀察＿＿＿。<br><span lang="en">I have implemented ___. Next, I will ask a peer to try ___ and observe ___.</span></li>
 </ol>
 <p>報告後與教師確認一個可展示的成果，作為下一個檢查點的目標。</p>
 <p lang="en">After presenting, agree with the teacher on one demonstrable result for the next checkpoint.</p></article>
